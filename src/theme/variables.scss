@@ -1,2 +1,71 @@
-// For information on how to create your own theme, please refer to:
-// https://ionicframework.com/docs/theming/
+/** Ionic CSS Variables **/
+:root {
+  /** primary - Verde Pastel / Sálvia **/
+  --ion-color-primary: #709775;
+  --ion-color-primary-rgb: 112,151,117;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-contrast-rgb: 255,255,255;
+  --ion-color-primary-shade: #638567;
+  --ion-color-primary-tint: #7ea183;
+
+  /** secondary - Menta Pastel Claro **/
+  --ion-color-secondary: #a1c1a8;
+  --ion-color-secondary-rgb: 161,193,168;
+  --ion-color-secondary-contrast: #2f3e33;
+  --ion-color-secondary-contrast-rgb: 47,62,51;
+  --ion-color-secondary-shade: #8eaa94;
+  --ion-color-secondary-tint: #abc7b2;
+
+  /** tertiary - Oliva Pastel Suave **/
+  --ion-color-tertiary: #a3b19b;
+  --ion-color-tertiary-rgb: 163,177,155;
+  --ion-color-tertiary-contrast: #2c3527;
+  --ion-color-tertiary-contrast-rgb: 44,53,39;
+  --ion-color-tertiary-shade: #8f9c88;
+  --ion-color-tertiary-tint: #acb9a5;
+
+  /** success - Verde Sucesso (Suave) **/
+  --ion-color-success: #81b29a;
+  --ion-color-success-rgb: 129,178,154;
+  --ion-color-success-contrast: #ffffff;
+  --ion-color-success-contrast-rgb: 255,255,255;
+  --ion-color-success-shade: #729d88;
+  --ion-color-success-tint: #8dbaa4;
+
+  /** danger - Coral/Vermelho Pastel Suave **/
+  --ion-color-danger: #e07a5f;
+  --ion-color-danger-rgb: 224,122,95;
+  --ion-color-danger-contrast: #ffffff;
+  --ion-color-danger-contrast-rgb: 255,255,255;
+  --ion-color-danger-shade: #c56b54;
+  --ion-color-danger-tint: #e3876f;
+}
+
+/* CONFIGURAÇÃO PARA O MODO ESCURO */
+@media (prefers-color-scheme: dark) {
+  body {
+    /* Mantém o verde pastel legível no fundo escuro */
+    --ion-color-primary: #8cb393;
+    --ion-color-primary-rgb: 140,179,147;
+    --ion-color-primary-contrast: #1c271e;
+    --ion-color-primary-contrast-rgb: 28,39,30;
+    --ion-color-primary-shade: #7b9e82;
+    --ion-color-primary-tint: #98bb9e;
+
+    --ion-color-secondary: #a1c1a8;
+    --ion-color-secondary-rgb: 161,193,168;
+    --ion-color-secondary-contrast: #1c271e;
+    --ion-color-secondary-contrast-rgb: 28,39,30;
+
+    /* Fundo Dark suave (Cinza-grafite fosco, não-neon) */
+    --ion-background-color: #191c1a;
+    --ion-background-color-rgb: 25,28,26;
+
+    --ion-text-color: #e1e3e0;
+    --ion-text-color-rgb: 225,227,224;
+
+    /* Cor de fundo dos Cards combinando com o tema sálvia escuro */
+    --ion-item-background: #222623;
+    --ion-card-background: #222623;
+  }
+}
