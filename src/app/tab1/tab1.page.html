@@ -1,17 +1,26 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Identificação</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-card>
+    <img alt="Foto do Aluno" src="assets/erick.jpeg" style="width: 100%; max-height: 300px; object-fit: cover;" />
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+    <ion-card-header>
+      <ion-card-title>Erick Tostes da Silva</ion-card-title>
+      <ion-card-subtitle>Matrícula: 25101714</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p><strong>Turma:</strong> ADS0301M </p>
+      <p><strong>Unidade:</strong> Campo Grande</p>
+      <p><strong>Turno:</strong> Manhã</p>
+
+      <hr style="margin: 15px 0; border: 0; border-top: 1px solid var(--ion-color-light);" />
+
+      <p><strong>Palavra-Chave:</strong> <span style="color: var(--ion-color-danger); font-weight: bold;">AGUARDANDO PROFESSOR</span></p>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

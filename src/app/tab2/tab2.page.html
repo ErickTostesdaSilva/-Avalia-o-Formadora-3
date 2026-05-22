@@ -1,17 +1,48 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 2
-    </ion-title>
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Navegar Produtos</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" class="ion-padding">
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <div *ngIf="produtos.length > 0; else carregando">
+
+    <ion-card>
+      <img [src]="produtos[indexAtual].image" style="width: 100%; max-height: 220px; object-fit: contain; padding: 15px; background: #fff;" />
+
+      <ion-card-header>
+        <ion-card-subtitle>Categoria: {{ produtos[indexAtual].category }} | ID: {{ produtos[indexAtual].id }}</ion-card-subtitle>
+        <ion-card-title>{{ produtos[indexAtual].title }}</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <p>{{ produtos[indexAtual].description }}</p>
+
+        <h3 style="margin-top: 15px; font-weight: bold; color: var(--ion-color-success); font-size: 1.3rem;">
+          ${{ produtos[indexAtual].price }}
+        </h3>
+      </ion-card-content>
+    </ion-card>
+
+    <div style="display: flex; justify-content: space-between; margin: 0 10px;">
+
+      <ion-button (click)="anterior()" [disabled]="indexAtual === 0" color="secondary">
+        Anterior
+      </ion-button>
+
+      <ion-button (click)="proximo()" [disabled]="indexAtual === produtos.length - 1" color="success">
+        Próximo
+      </ion-button>
+
+    </div>
+
+  </div>
+
+  <ng-template #carregando>
+    <div style="text-align: center; margin-top: 50px;">
+      <p>Buscando os produtos na FakeStore API...</p>
+    </div>
+  </ng-template>
+
 </ion-content>
